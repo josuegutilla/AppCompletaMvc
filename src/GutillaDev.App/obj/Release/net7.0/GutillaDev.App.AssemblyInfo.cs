@@ -11,6 +11,7 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
 [assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-GutillaDev.App-c7c8d890-01a4-480e-9e4c-8f99ea307b6f")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("GutillaDev.App")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]

@@ -3,7 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GutillaDev.App", "src\GutillaDev.App\GutillaDev.App.csproj", "{6BE4D858-1929-4734-A774-4FA4B7E181CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GutillaDev.Business", "src\GutillaDev.Business\GutillaDev.Business.csproj", "{CFE8381F-6250-4557-AF58-67D84D8EA99D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GutillaDev.Data", "src\GutillaDev.Data\GutillaDev.Data.csproj", "{6FF6DB15-74D1-4BF5-8A88-788CBA6AB384}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6BE4D858-1929-4734-A774-4FA4B7E181CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BE4D858-1929-4734-A774-4FA4B7E181CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BE4D858-1929-4734-A774-4FA4B7E181CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BE4D858-1929-4734-A774-4FA4B7E181CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFE8381F-6250-4557-AF58-67D84D8EA99D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFE8381F-6250-4557-AF58-67D84D8EA99D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFE8381F-6250-4557-AF58-67D84D8EA99D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFE8381F-6250-4557-AF58-67D84D8EA99D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FF6DB15-74D1-4BF5-8A88-788CBA6AB384}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FF6DB15-74D1-4BF5-8A88-788CBA6AB384}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FF6DB15-74D1-4BF5-8A88-788CBA6AB384}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FF6DB15-74D1-4BF5-8A88-788CBA6AB384}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection

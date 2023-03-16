@@ -1301,6 +1301,32 @@
             "rid": "win"
           }
         }
+      },
+      "GutillaDev.Business/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/GutillaDev.Business.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GutillaDev.Business.dll": {}
+        }
+      },
+      "GutillaDev.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "GutillaDev.Business": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.4",
+          "Microsoft.EntityFrameworkCore.Relational": "7.0.4",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.4"
+        },
+        "compile": {
+          "bin/placeholder/GutillaDev.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GutillaDev.Data.dll": {}
+        }
       }
     }
   },
@@ -3895,10 +3921,21 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "GutillaDev.Business/1.0.0": {
+      "type": "project",
+      "path": "../GutillaDev.Business/GutillaDev.Business.csproj",
+      "msbuildProject": "../GutillaDev.Business/GutillaDev.Business.csproj"
+    },
+    "GutillaDev.Data/1.0.0": {
+      "type": "project",
+      "path": "../GutillaDev.Data/GutillaDev.Data.csproj",
+      "msbuildProject": "../GutillaDev.Data/GutillaDev.Data.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "GutillaDev.Data >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 7.0.4",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 7.0.4",
       "Microsoft.AspNetCore.Identity.UI >= 7.0.4",
@@ -3938,7 +3975,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Josué\\OneDrive\\Área de Trabalho\\AppMvcCompleta\\AppMvcCompleta\\src\\GutillaDev.Data\\GutillaDev.Data.csproj": {
+              "projectPath": "C:\\Users\\Josué\\OneDrive\\Área de Trabalho\\AppMvcCompleta\\AppMvcCompleta\\src\\GutillaDev.Data\\GutillaDev.Data.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

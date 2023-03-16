@@ -15,4 +15,8 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GutillaDev.Data\GutillaDev.Data.csproj" />
+  </ItemGroup>
+
 </Project>
