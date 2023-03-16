@@ -1,11 +1,5 @@
 ﻿using GutillaDev.Business.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GutillaDev.Data.Context
 {
@@ -22,7 +16,6 @@ namespace GutillaDev.Data.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
             foreach (var property in modelBuilder.Model.GetEntityTypes() 
                 .SelectMany(e => e.GetProperties()
                     .Where(p => p.ClrType == typeof(string))))
