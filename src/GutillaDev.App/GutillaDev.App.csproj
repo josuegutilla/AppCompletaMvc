@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
-    <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>aspnet-GutillaDev.App-c7c8d890-01a4-480e-9e4c-8f99ea307b6f</UserSecretsId>
   </PropertyGroup>
@@ -14,14 +13,11 @@
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="7.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.4" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.5" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\GutillaDev.Data\GutillaDev.Data.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="NewFolder\" />
   </ItemGroup>
 
 </Project>
