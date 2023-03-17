@@ -1,4 +1,4 @@
-namespace GutillaDev.App.Models
+namespace GutillaDev.App.ViewModels
 {
     public class ErrorViewModel
     {

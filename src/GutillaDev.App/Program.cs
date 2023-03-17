@@ -21,6 +21,8 @@ builder.Services.AddDbContext<MeuDbContext>(options => //Banco de dados
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
+builder.Services.AddAutoMapper(typeof(Program));
+
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<MeuDbContext>();
