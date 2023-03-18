@@ -21,6 +21,7 @@ namespace GutillaDev.App.ViewModels
         [StringLength(1000, ErrorMessage = "O campo {0} precisa ter entre {2} e {1} caracteres!", MinimumLength = 2)]
         public string Descricao { get; set; }
 
+        [Display(Name = "Imagem do Produto")]
         public IFormFile ImagemUpload { get; set; }
 
         public string Imagem { get; set; }

@@ -25,8 +25,8 @@ namespace GutillaDev.App.Controllers
 
         public async Task<IActionResult> Details(Guid id)
         {
-            var fornecedorViewModel = ObterFornecedorEndereco(id);
-           
+            var fornecedorViewModel = await ObterFornecedorEndereco(id);
+
             if (fornecedorViewModel == null)
             {
                 return NotFound();
@@ -81,7 +81,7 @@ namespace GutillaDev.App.Controllers
 
         public async Task<IActionResult> Delete(Guid id)
         {
-            var fornecedorViewModel = ObterFornecedorEndereco(id);
+            var fornecedorViewModel = await ObterFornecedorEndereco(id);
             
             if (fornecedorViewModel == null)
             {

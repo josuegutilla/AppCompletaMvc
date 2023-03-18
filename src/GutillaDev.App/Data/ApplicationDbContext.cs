@@ -10,5 +10,6 @@ namespace GutillaDev.App.Data
             : base(options)
         {
         }
+        public DbSet<GutillaDev.App.ViewModels.EnderecoViewModel> EnderecoViewModel { get; set; }
     }
 }
