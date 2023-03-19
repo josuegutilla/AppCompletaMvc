@@ -28,7 +28,7 @@ namespace GutillaDev.App.Controllers
 
         public async Task<IActionResult> Details(Guid id)
         {
-            var produtoViewModel = ObterProduto(id);
+            var produtoViewModel = await ObterProduto(id);
 
             if (produtoViewModel == null) return NotFound();
 
@@ -48,16 +48,21 @@ namespace GutillaDev.App.Controllers
         {
             produtoViewModel = await PopularFornecedores(produtoViewModel);
 
-            if (!ModelState.IsValid) return View(produtoViewModel);
+            var imgPrefixo = Guid.NewGuid() + "_";
+            if (!await UploadArquivo(produtoViewModel.ImagemUpload, imgPrefixo))
+            {
+                return View(produtoViewModel);
+            }
 
-            _produtoRepository.Adicionar(_mapper.Map<Produto>(produtoViewModel));
+            produtoViewModel.Imagem = imgPrefixo + produtoViewModel.ImagemUpload.FileName;
+            await _produtoRepository.Adicionar(_mapper.Map<Produto>(produtoViewModel));
 
-            return View(produtoViewModel); 
+            return RedirectToAction("Index");
         }
 
         public async Task<IActionResult> Edit(Guid id)
         {
-            var produtoViewModel = ObterProduto(id);
+            var produtoViewModel = await ObterProduto(id);
 
             if (produtoViewModel == null) return NotFound();
 
@@ -75,14 +80,14 @@ namespace GutillaDev.App.Controllers
 
             if (!ModelState.IsValid) return View(produtoViewModel);
 
-            _produtoRepository.Atualizar(_mapper.Map<Produto>(produtoViewModel));
+            await _produtoRepository.Atualizar(_mapper.Map<Produto>(produtoViewModel));
 
             return RedirectToAction("Index");
         }
 
         public async Task<IActionResult> Delete(Guid id)
         {
-            var produto = ObterProduto(id);
+            var produto = await ObterProduto(id);
 
             if (produto == null)
             {
@@ -116,6 +121,26 @@ namespace GutillaDev.App.Controllers
         {
             produto.Fornecedores = _mapper.Map<IEnumerable<FornecedorViewModel>>(await _fornecedorRepository.ObterTodos());
             return produto;
+        }
+
+        private async Task<bool> UploadArquivo(IFormFile arquivo, string imgPrefixo)
+        {
+            if (arquivo.Length <= 0) return false;
+
+            var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/imagens", imgPrefixo + arquivo.FileName);
+
+            if (System.IO.File.Exists(path))
+            {
+                ModelState.AddModelError(string.Empty, "Já existe um arquivo com este nome!");
+                return false;
+            }
+
+            using (var stream = new FileStream(path, FileMode.Create))
+            {
+                await arquivo.CopyToAsync(stream);
+            }
+
+            return true;
         }
     }
 }

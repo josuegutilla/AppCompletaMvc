@@ -20,4 +20,8 @@
     <ProjectReference Include="..\GutillaDev.Data\GutillaDev.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\imagens\" />
+  </ItemGroup>
+
 </Project>
