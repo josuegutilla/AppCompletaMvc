@@ -1,4 +1,5 @@
-﻿using GutillaDev.Business.Models;
+﻿using GutillaDev.App.Extensions;
+using GutillaDev.Business.Models;
 using System.ComponentModel.DataAnnotations;
 
 namespace GutillaDev.App.ViewModels
@@ -26,6 +27,7 @@ namespace GutillaDev.App.ViewModels
 
         public string Imagem { get; set; }
 
+        [Moeda]
         [Required(ErrorMessage = "O campo {0} é obrigatório!")]
         public decimal Valor { get; set; }
 
