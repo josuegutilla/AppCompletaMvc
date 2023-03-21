@@ -36,6 +36,6 @@ namespace GutillaDev.App.ViewModels
         public string Estado { get; set; }
 
         [HiddenInput]
-        public Fornecedor Fornecedor { get; set; } //composição tem 1;
+        public Guid FornecedorId { get; set; }
     }
 }
