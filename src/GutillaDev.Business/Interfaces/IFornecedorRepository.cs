@@ -1,10 +1,11 @@
-﻿using GutillaDev.Business.Models;
+﻿using GutillaDev.Business.Interfaces;
+using GutillaDev.Business.Models;
 
-namespace GutillaDev.Business.Interfaces
+namespace GutillaDev.Business.Intefaces
 {
     public interface IFornecedorRepository : IRepository<Fornecedor>
     {
-        Task<Fornecedor> ObterFornecedorEndereco(Guid id); //obter o fornecedor é o endereço dele
-        Task<Fornecedor> ObterFornecedorProdutosEndereco(Guid id); //obter o fornecedor os produtos e o endereço dele
+        Task<Fornecedor> ObterFornecedorEndereco(Guid id);
+        Task<Fornecedor> ObterFornecedorProdutosEndereco(Guid id);
     }
 }

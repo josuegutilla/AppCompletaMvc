@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "MpTpz2UVOLvp3NphR1h6ygaIb7uLkb+DebWeEgdlPRRoBgTFzODr2XOsbEvow/TN+rlLr/0XxlbnsOO93W5N+A==",
+  "dgSpecHash": "qJJ7U7aCTbk1LZitw9bmTV/pB8gCrIazVSxzaGV0MLBdT6xk3x9WcjTMs+Xz1DCSjGpcuhBEYuNobxuS44elSg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Josué\\OneDrive\\Área de Trabalho\\AppMvcCompleta\\AppMvcCompleta\\src\\GutillaDev.Business\\GutillaDev.Business.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Josué\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512"
+  ],
   "logs": []
 }
