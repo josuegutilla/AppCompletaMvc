@@ -292,3 +292,4 @@ C:\Users\Josué\OneDrive\Área de Trabalho\AppMvcCompleta\AppMvcCompleta\src\Gut
 C:\Users\Josué\OneDrive\Área de Trabalho\AppMvcCompleta\AppMvcCompleta\src\GutillaDev.App\bin\Debug\net7.0\libman.json
 C:\Users\Josué\OneDrive\Área de Trabalho\AppMvcCompleta\AppMvcCompleta\src\GutillaDev.App\bin\Debug\net7.0\appsettings.Production.json
 C:\Users\Josué\OneDrive\Área de Trabalho\AppMvcCompleta\AppMvcCompleta\src\GutillaDev.App\bin\Debug\net7.0\appsettings.Stagin.json
+C:\Users\Josué\OneDrive\Área de Trabalho\AppMvcCompleta\AppMvcCompleta\src\GutillaDev.App\bin\Debug\net7.0\FluentValidation.dll
